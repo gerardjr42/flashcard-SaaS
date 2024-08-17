@@ -1,4 +1,4 @@
-// File: /Users/theseus/Documents/Projects/flashcard-SaaS/app/sign-in/[[...sign-in]]/page.js
+// File: C:\Users\vappr\flashcard-SaaS\app\sign-in\[[...sign-in]]\page.js
 import * as entry from '../../../../../app/sign-in/[[...sign-in]]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
