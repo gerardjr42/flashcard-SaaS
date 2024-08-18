@@ -1,11 +1,11 @@
 'use client'
 
 import { useUser } from '@clerk/nextjs'
-import { useState } from "react";
-import { TextField, Typography, Box, Paper, Container, Button, Grid, Card, CardActionArea, CardContent, Dialog, DialogTitle, DialogContent, DialogContentText } from "@mui/material"
-import { writeBatch } from "firebase/firestore"
-import { useRouter } from "next/navigation"
-
+import { db } from '@/firebase'
+import { useState } from 'react';
+import { TextField, Typography, Box, Paper, Container, Button, Grid, Card, CardActionArea, CardContent, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material'
+import { useRouter } from 'next/navigation'
+import { doc, collection, setDoc, getDoc, writeBatch} from 'firebase/firestore'
 
 export default function Generate(){
     const {isLoaded, isSignedIn, user} = useUser()
@@ -17,14 +17,14 @@ export default function Generate(){
     const router = useRouter()
 
     /* function to submit the text to generate the flashcards from */
-    const handleSubmit=async () => {
+    const handleSubmit = async () => {
    
         fetch('api/generate', {
             method: 'POST',
             body: text,
         })
             .then((res) => res.json())
-            .then(data > setFlashcards(data))
+            .then((data) => setFlashcards(data))
     }
 
     const handleCardClick = (id) => {
@@ -35,11 +35,11 @@ export default function Generate(){
     }
 
     const handleOpen = () => {
-        setOpenI(true)
+        setOpen(true)
     }
 
     const handleClose = () => {
-        setOpenI(false)
+        setOpen(false)
     }
 
     const saveFlashcards = async () => {
@@ -197,7 +197,11 @@ export default function Generate(){
                     variant="outlined"
                 />
             </DialogContent>
-            
+            <DialogActions>
+                <Button onClick={handleClose}>Cancel</Button>
+                <Button onClick={saveFlashcards}>Save</Button>
+            </DialogActions>
+
         </Dialog>
     </Container>
 
