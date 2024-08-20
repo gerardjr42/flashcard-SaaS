@@ -16,15 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/generate/page.js"
     ],
-    "/sign-in/[[...sign-in]]/page": [
+    "/flashcards/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/sign-in/[[...sign-in]]/page.js"
+      "static/chunks/app/flashcards/page.js"
     ],
-    "/_not-found/page": [
+    "/flashcard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/flashcard/page.js"
     ]
   }
 }
