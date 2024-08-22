@@ -29,7 +29,7 @@ Return in the following JSON format:
 
 export async function POST(req) {
   const openAI = new OpenAI();
-  const data = await req.json();
+  const data = await req.text();
 
   const completion = await openAI.chat.completions.create({
     model: "gpt-4o",
@@ -39,6 +39,8 @@ export async function POST(req) {
     ],
     response_format: { type: "json_object" },
   });
+
+  console.log(completion.choices[0].message.content)
 
   const flashcards = JSON.parse(completion.choices[0].message.content);
 

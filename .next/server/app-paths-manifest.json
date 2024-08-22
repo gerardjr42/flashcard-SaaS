@@ -1,5 +1,7 @@
 {
   "/page": "app/page.js",
-  "/sign-in/[[...sign-in]]/page": "app/sign-in/[[...sign-in]]/page.js",
-  "/sign-up/[[...sign-up]]/page": "app/sign-up/[[...sign-up]]/page.js"
+  "/flashcards/page": "app/flashcards/page.js",
+  "/generate/page": "app/generate/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/flashcard/page": "app/flashcard/page.js"
 }
