@@ -92,18 +92,6 @@ export default function Home() {
               <Typography variant="body2" color="text.secondary">
                 <strong>Mail Instructions:</strong> {flashcard.mailInstructions}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                <strong>Payment Voucher Info:</strong> {flashcard.paymentVoucherInfo}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                <strong>How To Fill Voucher:</strong> {flashcard.howToFillVoucher}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                <strong>How To Make Payment:</strong> {flashcard.howToMakePayment}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                <strong>Payment Due Date:</strong> {flashcard.paymentDueDate}
-              </Typography>
             </CardContent>
             <CardActions>
               <Button size="small">Learn More</Button>
