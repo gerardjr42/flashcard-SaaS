@@ -1,4 +1,4 @@
-// File: /Users/theseus/Documents/Projects/flashcard-SaaS/app/page.js
+// File: /mnt/c/Users/Natalya/flashcard-SaaS/app/page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

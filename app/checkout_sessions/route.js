@@ -1,4 +1,5 @@
 import Stripe from "stripe";
+import { PDFDocument } from 'pdf-lib';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
